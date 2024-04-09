@@ -1,0 +1,94 @@
+html {
+   font-family: "Sora", sans-serif;
+   @apply leading-normal;
+}
+
+.nav-hover {
+    position: relative;
+}
+.nav-hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    width: 0;
+    height: 2px; /* Adjust border thickness */
+    background: linear-gradient(260deg, #2a1454 0%, #8750f7 100%); /* Border color */
+    transition: width 0.3s ease-in-out; /* Transition for width */
+  }
+  
+.nav-hover:hover::before {
+    width: 100%; 
+    right: auto;
+    left: 0;
+}
+
+.services {
+    transition: background-color 1000ms linear;
+    cursor: pointer;
+  }
+  
+.services:hover {
+    background-color: #8750f7;
+}
+.services:hover * {
+    color: white;
+}
+
+.contact-me {
+    background: linear-gradient(
+		to right,
+		#8750f7 0%,
+		#2a1454 51%,
+        #8750f7 100%
+	);
+    transition: 0.4s;
+    background-size: 200%; 
+    cursor: pointer;
+}
+
+.contact-me:hover {
+    background-position: -100%;
+}
+
+
+.full-stack {
+    background: linear-gradient(
+		to right,
+		#8750f7 0%,
+		#2a1454 100%
+	);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.form-input {
+    background: #f6f3fc;
+    border: 1px solid #2a1454;
+    color: #2a1454;
+    display: block;
+    width: 50%;
+    font-size: 16px;
+    line-height: 1;
+    padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.3s 0s ease-out;
+    outline: none;
+    height: auto;
+}
+
+.form-area {
+    background: #f6f3fc;
+    border: 1px solid #2a1454;
+    color: #2a1454;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1;
+    padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.3s 0s ease-out;
+    outline: none;
+    height: 200px;
+    resize: none;
+}
