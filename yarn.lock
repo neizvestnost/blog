@@ -222,6 +222,11 @@
   dependencies:
     swiper "^11.0.6"
 
+"@stimulus-components/scroll-to@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@stimulus-components/scroll-to/-/scroll-to-5.0.1.tgz#5697578a0be4ee374880db62c2c68fcd49a6ae4a"
+  integrity sha512-teJlu+wQAw3Bl5vI2TJLzW0OxH8W05StYPlWZFUDjudJzhUZwuF27dfu+KH/PwEELWyRyiwC+msXlXXWSTeHmQ==
+
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
@@ -863,6 +868,11 @@ swiper@^11.0.6:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.1.0.tgz#3497b60d65d1320e427cdf11dfaad5c555283826"
   integrity sha512-Pm78CgU7Wvg+w/MgIL/1NwMSLgx0XqFof25EnVyX8iZFCYJv5CppH7LHkBj43qW2k5Cp3Iz7FcdBxrox7XX2AQ==
+
+tailwindcss-stimulus-components@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-5.1.1.tgz#0d1aee03819033844528863a0288de4dff54bfe5"
+  integrity sha512-9e3H9WLZoGzWQBVOdYvxqM42MsJ4dfkfdrs3NGV+HYvHbIcF9tukl2MPKVZpBv/pP+puZbJv0lFgdn79IGVApA==
 
 tailwindcss@^3.4.1:
   version "3.4.1"

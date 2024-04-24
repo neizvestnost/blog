@@ -1,23 +1,46 @@
-<header class='h-28 bg-white fixed top-0 w-full z-[1]'>
-  <nav class='mx-[10%] h-full flex items-center'>
+<header class='h-28 bg-white fixed top-0 w-full z-[1] shadow-md' data-controller="toggle">
+  <nav class='mx-[5%] sm:mx-[10%] h-full flex items-center'>
     <div class='flex items-center'>
-      <div class='mr-9'>
+      <div class='sm:mr-9'>
         <%= image_tag('gmail', class: 'w-[60px] h-[60px]')%>
       </div>
-      <span>google.com</span>
+      <a href='mailto:maix.ukrnet@gmail.com' class='hidden lg:block text-[#2a1454]'>maix.ukrnet@gmail.com</a>
     </div>
     <div class='hidden md:block ml-auto'>
-      <ul class='flex items-center justify-around text-[#2a1454]'>
-        <li class="mx-4 nav-hover"><a href="" class=''>Services</a></li>
-        <li class="mx-4 nav-hover"><a href="">CV</a></li>
-        <li class="mx-4 nav-hover"><a href="">Reviews</a></li>
-        <li class="mx-4 nav-hover"><a href="">Contact</a></li>
+      <ul class='flex items-center justify-around text-[#2a1454] nav-ul' data-controller="nav-active">
+        <li class="mx-4 nav-hover nav-active" data-action="click->nav-active#active"><a id='nav-services' href="#services" data-controller="scroll-to" data-scroll-to-offset-value="130">Services</a></li>
+        <li class="mx-4 nav-hover" data-action="click->nav-active#active"><a id='nav-cv' href="#cv" data-controller="scroll-to" data-scroll-to-offset-value="130">CV</a></li>
+        <li class="mx-4 nav-hover" data-action="click->nav-active#active"><a id='nav-skills' href="#skills"  data-controller="scroll-to" data-scroll-to-offset-value="130">Skills</a></li>
+        <li class="mx-4 nav-hover" data-action="click->nav-active#active"><a id='nav-reviews' href="#reviews" data-controller="scroll-to" data-scroll-to-offset-value="130">Reviews</a></li>
       </ul>
     </div>
-    <div class='ml-auto md:ml-8 flex  items-center justify-center'>
-      <a class='w-36 contact-me text-white h-12 rounded-full flex items-center justify-center'>
+    <div class='sm:max-md:ml-auto max-sm:ml-auto md:ml-8 flex  items-center justify-center'>
+      <a class='w-36 contact-me text-white h-12 rounded-full flex items-center justify-center' href="#contact" data-controller="scroll-to" data-scroll-to-offset-value="140">
         Contact Me
       </a>
     </div>
+    <div class="block md:hidden flex items-center" >
+      <input id="menu__toggle" type="checkbox" data-action="click->toggle#toggle touch->toggle#toggle"/>
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+    </div>
   </nav>
+  <div class='bg-[#2a1454] w-full h-screen hidden'
+      data-toggle-target='toggleable'
+      data-transition-enter="transition-all ease-linear duration-300"
+      data-transition-enter-from="opacity-0 h-0"
+      data-transition-enter-to="opacity-100"
+      data-transition-leave="transition-all ease-linear duration-300"
+      data-transition-leave-from="opacity-100"
+      data-transition-leave-to="opacity-0">
+    <nav>
+      <ul class='flex flex-col gap-y-6 items-center py-8 uppercase'>
+        <li class="text-xl text-[#ffffff]"><a href="#services" data-controller="scroll-to" data-scroll-to-offset-value="130" data-action="click->toggle#toggle touch->toggle#toggle" onclick="document.getElementById('menu__toggle').checked = !document.getElementById('menu__toggle').checked">Services</a></li>
+        <li class="text-xl text-[#ffffff]"><a href="#cv" data-controller="scroll-to" data-scroll-to-offset-value="130" data-action="click->toggle#toggle touch->toggle#toggle" onclick="document.getElementById('menu__toggle').checked = !document.getElementById('menu__toggle').checked">CV</a></li>
+        <li class="text-xl text-[#ffffff]"><a href="#skills" data-controller="scroll-to" data-scroll-to-offset-value="130" data-action="click->toggle#toggle touch->toggle#toggle" onclick="document.getElementById('menu__toggle').checked = !document.getElementById('menu__toggle').checked">Skills</a></li>
+        <li class="text-xl text-[#ffffff]"><a href="#reviews" data-controller="scroll-to" data-scroll-to-offset-value="130" data-action="click->toggle#toggle touch->toggle#toggle" onclick="document.getElementById('menu__toggle').checked = !document.getElementById('menu__toggle').checked">Reviews</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>

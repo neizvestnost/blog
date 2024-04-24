@@ -1,25 +1,13 @@
 import { Controller } from "@hotwired/stimulus"
-
 export default class extends Controller {
   sendData() {
     const formData = new FormData(this.element);
-    console.log(formData);
-    this.#gapiLoaded()
-
-    
-
-  }
-
-  #gapiLoaded() {
-    gapi.load('client', this.#initializeGapiClient);
-  }
-
-  #initializeGapiClient() {
-    gapi.client.init({
-      apiKey: 'AIzaSyBgKqvqv7ar-b0X0rzvqtZZU_IcW_pjfHI',
-      clientId: '107708829761556820273',
-      discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
-      scope: "https://www.googleapis.com/auth/spreadsheets"
-    }).then(() => console.log('xyi'))
+    fetch('https://script.google.com/macros/s/AKfycbxbmMZEonqo2kjtN4aWXQTj0dfOxKsCJfJX-xMsP1WTU6CilSZl2HWjqWjtp5s8fb_-DQ/exec', { method: 'POST', body: formData })
+      .then(function(response) {
+          console.log('Success!', response)
+      })
+      .catch(function(error) {
+          console.error('Error!', error.message)
+      })
   }
 }

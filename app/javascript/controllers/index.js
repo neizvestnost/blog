@@ -6,8 +6,21 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 import ContactFormController from "./contact_form_controller";
+import VisibilityController from './visibility_controller';
+import NavActiveController from './nav_active_controller';
 import Carousel from '@stimulus-components/carousel'
+import ScrollTo from '@stimulus-components/scroll-to'
+import { Toggle } from "tailwindcss-stimulus-components"
+import { Dropdown } from "tailwindcss-stimulus-components"
 
 application.register("hello", HelloController)
 application.register('carousel', Carousel)
+application.register('scroll-to', ScrollTo)
 application.register('contact-form', ContactFormController)
+application.register('toggle', Toggle)
+application.register('dropdown', Dropdown)
+application.register('visibility', VisibilityController)
+application.register('nav-active', NavActiveController)
+
+
+
