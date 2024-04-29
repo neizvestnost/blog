@@ -1,3 +1,7 @@
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #8750f7 #2a1454;
+}
 html {
    font-family: "Sora", sans-serif;
    @apply leading-normal;
@@ -81,6 +85,7 @@ html {
     transition: all 0.3s 0s ease-out;
     outline: none;
     height: auto;
+    @apply placeholder:text-xs sm:placeholder:text-base
 }
 
 .form-area {
@@ -97,6 +102,7 @@ html {
     outline: none;
     height: 200px;
     resize: none;
+    @apply placeholder:text-xs sm:placeholder:text-base
 }
 
 #menu__toggle {

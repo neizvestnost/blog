@@ -14,7 +14,7 @@
         <li class="mx-4 nav-hover" data-action="click->nav-active#active"><a id='nav-reviews' href="#reviews" data-controller="scroll-to" data-scroll-to-offset-value="130">Reviews</a></li>
       </ul>
     </div>
-    <div class='sm:max-md:ml-auto max-sm:ml-auto md:ml-8 flex  items-center justify-center'>
+    <div class='sm:max-md:ml-auto max-sm:ml-auto md:ml-8 flex  items-center justify-center' data-action="click->toggle#hide touch->toggle#hide" onclick="document.getElementById('menu__toggle').checked = false">
       <a class='w-36 contact-me text-white h-12 rounded-full flex items-center justify-center' href="#contact" data-controller="scroll-to" data-scroll-to-offset-value="140">
         Contact Me
       </a>
